@@ -16,7 +16,10 @@ CLIENT_SECRET = os.environ['CLIENT_SECRET']
 PORT = int(os.environ.get('PORT', 2587))
 
 # Clever redirect URIs must be preregistered on your developer dashboard.
-# If using the default PORT set above, make sure to register "http://localhost:2587/oauth"
+# If using the default PORT set above, make sure to register "http://localhost:2587/oauth".
+# Redirect URI is https://cryptic-retreat-43545.herokuapp.com/oauth on production. Also the
+# host on production is "0.0.0.0". Those are the only differences between the
+# dvelopment code and the production code.
 REDIRECT_URI = 'http://localhost:{port}/oauth'.format(port=PORT)
 CLEVER_OAUTH_URL = 'https://clever.com/oauth/tokens'
 CLEVER_API_BASE = 'https://api.clever.com'
