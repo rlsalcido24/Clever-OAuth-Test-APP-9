@@ -143,4 +143,4 @@ def app():
 		return "You must be logged in to see this page! Click <a href='/'>here</a> to log in."
 
 if __name__ == '__main__':
-	run(app=myapp, host='0.0.0.0', port=PORT)
+	run(app=myapp, host='localhost', port=PORT)
